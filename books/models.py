@@ -6,7 +6,7 @@ genre_choices= (
 ('romantic', 'Romantic'), 
 ('comic', 'Comic'), 
 ('fantasy', 'Fantasy'), 
-('horror', 'Horror'),
+('horror', 'Horror'), 
 ('educational', 'Educational'),
 )
 
