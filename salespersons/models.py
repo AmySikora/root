@@ -7,5 +7,5 @@ class Salesperson(models.Model):
 	bio = models.TextField(default="no bio...")
 
 	def __str__(self):
-		return f"Profile of {self.user.username}"
-		# f-string allows to format the string, so for username abc, you will see: Profile of abc 
+		return f"Profile of {self.username.username}"
+		# f-string allows to format the string, so for username abc, you will see: Profile of abc  s
