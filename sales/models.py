@@ -2,8 +2,10 @@ from django.db import models
 from books.models import Book 
 
 # Create your models here.
+
 def get_default_book():
-    return Book.objects.first().id
+    default_book = Book.objects.first() 
+    return default_book.id if default_book else None
 
 class Sale(models.Model):
 	book = models.ForeignKey(Book, on_delete=models.CASCADE)
