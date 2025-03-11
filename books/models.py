@@ -17,7 +17,7 @@ book_type_choices=(
 )
 class Book(models.Model):
 	name=models.CharField(max_length=120)
-	price = models.FloatField(help_text='in US dollars $')
+	price = models.FloatField(default=9.99, help_text='in US dollars $')
 	genre = models.CharField(max_length=12, choices=genre_choices, default='cl')
 	book_type = models.CharField(max_length=12, choices=book_type_choices, default='hc')
 	
