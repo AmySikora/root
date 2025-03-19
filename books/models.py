@@ -23,6 +23,7 @@ class Book(models.Model):
     price = models.FloatField(default=9.99, help_text='In US dollars ($)')
     genre = models.CharField(max_length=12, choices=GENRE_CHOICES, default='classic')
     book_type = models.CharField(max_length=12, choices=BOOK_TYPE_CHOICES, default='hardcover')
+    pic = models.ImageField(upload_to='books', default='no_picture.jpg')
 
     def __str__(self):
         return f"{self.name} by {self.author_name}" if self.author_name else self.name
