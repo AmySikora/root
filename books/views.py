@@ -9,4 +9,7 @@ class BookListView(ListView):                           #class-based view
 
 class BookDetailView(DetailView):                       #class-based view
    model = Book                                        #specify model
-   template_name = 'books/detail.html'                 #specify template
+   template_name = 'books/detail.html'  
+   
+def home(request):
+    return render(request, 'books/books_home.html')               #specify template
