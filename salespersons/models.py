@@ -11,6 +11,7 @@ class Salesperson(models.Model):
     )  # Prevents deleting User when Salesperson is deleted
     name = models.CharField(max_length=120, default="Unknown Salesperson")
     bio = models.TextField(default="No bio...")  # Standardized default text
+    pic = models.ImageField(upload_to='salespersons', default='no_picture.jpg')
 
     def __str__(self):
         return f"{self.name} ({self.user.username if self.user else 'No User'})"
