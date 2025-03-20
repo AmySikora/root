@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models, reverse
 
 # Genre choices
 GENRE_CHOICES = (
@@ -27,3 +27,6 @@ class Book(models.Model):
 
     def __str__(self):
         return f"{self.name} by {self.author_name}" if self.author_name else self.name
+    
+    def get_absolute_url(self):
+       return reverse ('books:detail', kwargs={'pk': self.pk})
