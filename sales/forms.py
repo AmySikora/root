@@ -1,4 +1,5 @@
 from django import forms    #import django forms
+from .forms import SalesSearchForm
 
 CHART__CHOICES = (          #specify choices as a tuple
    ('#1', 'Bar chart'),    # when user selects "Bar chart", it is stored as "#1"

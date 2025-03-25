@@ -1,10 +1,9 @@
 <h1> Search for sales records </h1>
-<body>
-    <h1 style="text-align:center">Please log in</h1> 
-    <br>
-    <br>
-    <a href ="{%url 'login' %}">  Login  </a>
-    <br>
-    <br>
-    <br>
-<hr> 
+
+<hr>
+<form action="" method="POST">
+   {% csrf_token %}
+   {{form}}
+   <button type="submit" >search</button>
+
+</form> 
