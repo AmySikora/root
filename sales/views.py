@@ -25,6 +25,9 @@ def records(request):
         if qs:      #if data found
            #convert the queryset values to pandas dataframe
            sales_df=pd.DataFrame(qs.values())
+           #convert the dataframe to HTML
+           sales_df=sales_df.to_html()
+
         print(book_title, chart_type)  # Optional: Debugging only
 
 
